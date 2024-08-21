@@ -173,11 +173,6 @@ main{
     gap: 1.5rem;
 }
 
-.carrito-vacio,
-.carrito-comprado{
-    color:black
-}
-
 .carrito-productos{
     display: flex;
     flex-direction: column;
@@ -251,6 +246,3 @@ main{
     border-bottom-right-radius: 1rem;
 }
 
-.disabled{
-    display: none;
-}

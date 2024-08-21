@@ -1,0 +1,42 @@
+[
+    {
+        "id": "iphone-15",
+        "titulo": "Iphone 15",
+        "imagen": "./images/telefonos/iph-15.webp",
+        "categora": {
+            "nombre": "Iphones",
+            "id": "iphones"
+        },
+        "precio": 799
+    },
+    {
+        "id": "iphone-15-pro-max",
+        "titulo": "Iphone 15 Pro MAX",
+        "imagen": "./images/telefonos/15-pro-max.png",
+        "categora": {
+            "nombre": "Iphones",
+            "id": "iphones"
+        },
+        "precio": 1199
+    }, 
+    {
+        "id": "macbook",
+        "titulo": "Macbook Pro",
+        "imagen": "./images/macs/macboock.jpg",
+        "categora": {
+            "nombre": "Macbooks",
+            "id": "iphones"
+        },
+        "precio": 1300
+    }, 
+    {
+        "id": "ipad-pro",
+        "titulo": "Ipad Pro",
+        "imagen": "./images/tablets/ipad-pro.png",
+        "categora": {
+            "nombre": "Ipads",
+            "id": "ipads"
+        },
+        "precio": 999
+    }
+]
