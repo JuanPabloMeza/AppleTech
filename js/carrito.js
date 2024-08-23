@@ -60,8 +60,6 @@ function cargarProductosCarrito() {
 
 }
 
-cargarProductosCarrito();
-
 function actualizarBotonesEliminar() {
     botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
 

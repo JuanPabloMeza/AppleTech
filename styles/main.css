@@ -246,3 +246,6 @@ main{
     border-bottom-right-radius: 1rem;
 }
 
+.disabled{
+    display: none;
+}
