@@ -9,14 +9,14 @@ let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
 const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
 const contenedorTotal = document.querySelector("#total");
 const botonComprar = document.querySelector("#carrito-acciones-comprar");
-
+cargarProductosCarrito();
 function cargarProductosCarrito() {
+
     if (productosEnCarrito && productosEnCarrito.length > 0) {
 
         contenedorCarritoVacio.classList.add("disabled");
         contenedorCarritoProductos.classList.remove("disabled");
         contenedorCarritoAcciones.classList.remove("disabled");
-        contenedorCarritoComprado.classList.add("disabled");
     
         contenedorCarritoProductos.innerHTML = "";
     
@@ -59,6 +59,8 @@ function cargarProductosCarrito() {
     }
 
 }
+
+cargarProductosCarrito();
 
 function actualizarBotonesEliminar() {
     botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
@@ -107,6 +109,12 @@ function actualizarTotal() {
 
 botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
+
+    Swal.fire({
+        icon: "success",
+        title: "Felicitaciones!",
+        text: "Tu compra se realizo con exito",
+      });
 
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));

@@ -1,45 +1,11 @@
-const productos = [
-    {
-        id: "iphone-15",
-        titulo: "Iphone 15",
-        imagen: "./images/telefonos/iph-15.webp",
-        categoria: {
-            nombre: "Iphones",
-            id: "iphones"
-        },
-        precio: 799
-    },
-    {
-        id: "iphone-15-pro-max",
-        titulo: "Iphone 15 Pro MAX",
-        imagen: "./images/telefonos/15-pro-max.png",
-        categoria: {
-            nombre: "Iphones",
-            id: "iphones"
-        },
-        precio: 1199
-    }, 
-    {
-        id: "macbook",
-        titulo: "Macbook Pro",
-        imagen: "./images/macs/macboock.jpg",
-        categoria: {
-            nombre: "Macbooks",
-            id: "macbooks"
-        },
-        precio: 1300
-    }, 
-    {
-        id: "ipad-pro",
-        titulo: "Ipad Pro",
-        imagen: "./images/tablets/ipad-pro.png",
-        categoria: {
-            nombre: "Ipads",
-            id: "ipads"
-        },
-        precio: 999
-    },
-]
+let productos = [];
+
+fetch("./js/productos.json")
+    .then(response => response.json())
+    .then(data =>{
+        productos = data;
+        cargarProductos(productos);
+    })
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
@@ -70,7 +36,7 @@ function cargarProductos(productosElegidos) {
     actualizarBotonesAgregar();
 }
 
-cargarProductos(productos);
+
 
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
@@ -90,6 +56,7 @@ botonesCategorias.forEach(boton => {
 
     })
 });
+
 
 function actualizarBotonesAgregar() {
     botonesAgregar = document.querySelectorAll(".producto-agregar");
